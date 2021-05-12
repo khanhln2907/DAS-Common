@@ -103,7 +103,7 @@ public:
 	 * \return void
 	 *
 	 */
-	void begin(int level, Print *output, bool showLevel = true);
+	void begin(int level, HardwareSerial*output, bool showLevel = true);
 
 	/**
 	 * Set the log level.
@@ -294,7 +294,7 @@ private:
 #ifndef DISABLE_LOGGING
 	int _level;
 	bool _showLevel;
-	Print* _logOutput;
+	HardwareSerial* _logOutput;
 
 	printfunction _prefix = NULL;
 	printfunction _suffix = NULL;

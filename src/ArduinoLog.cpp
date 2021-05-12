@@ -31,7 +31,7 @@ SOFTWARE.
 
 #include "ArduinoLog.h"
 
-void Logging::begin(int level, Print* logOutput, bool showLevel)
+void Logging::begin(int level, HardwareSerial* logOutput, bool showLevel)
 {
 #ifndef DISABLE_LOGGING
 	setLevel(level);
