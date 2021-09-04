@@ -1,5 +1,5 @@
 #pragma once
-#include <stdint.h>
+#include "Arduino.h"
 
 template<typename T> struct Sample {
 	T Value;
