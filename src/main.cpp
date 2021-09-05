@@ -3,25 +3,30 @@
 #include "ArduinoLog.h"
 #include "HardwareSerial.h"
 
-#define USING_MAKEFILE 
+// #define USING_MAKEFILE
+
+void setup(){
+    pinMode(13, OUTPUT);
+}
+
+void loop(){
+    digitalWriteFast(13, HIGH);
+    delay(50);
+    digitalWriteFast(13, LOW);
+    delay(50);
+    Serial.printf("Hello \n");
+}
+
 
 extern "C" int main(void)
 {
 #ifdef USING_MAKEFILE
-
 	// To use Teensy 3.0 without Arduino, simply put your code here.
 	// For example:
-
-	pinMode(13, OUTPUT);
+	setup();
 	while (1) {
-      // put your main code here, to run repeatedly:
-    digitalWriteFast(13, HIGH);
-    delay(500);
-    digitalWriteFast(13, LOW);
-    delay(500);
-    Serial.printf("Hello \n");
+    loop();
 	}
-
 
 #else
 	// Arduino's main() function just calls setup() and loop()....
