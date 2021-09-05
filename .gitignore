@@ -23,3 +23,5 @@ WS_terminal.code-workspace
 .vs
 */*/Debug/*
 */*/*/__vm/*
+*.hex
+.makefile_build
